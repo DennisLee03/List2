@@ -13,9 +13,9 @@ void main(){
 	struct sData* list, * head = NULL;
 	for (int i = 0; i < 10; i++) {
 		if ((list = (struct sData*)malloc(sizeof(struct sData))) == NULL) {
-			printf("Failed in allocating memory\n");
-			exit(0);
-		}
+		printf("Failed in allocating memory\n");
+		exit(0);
+	}
 		list->next = head;
 		head = list;
 	}
@@ -40,6 +40,8 @@ void Output(struct sData *L) {
 		printf("%d.%d\n", buf->x, buf->y);
 		buf = buf->next;
 	}
+	//for (int i = 0;i < 10;i++) printf("%d.%d\n", L[i].x, L[i].y);
+	//printf("Succeeded in printing linked list\n");
 }
 void Free(struct sData *L) {
 	sData* buf;
