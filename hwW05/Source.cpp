@@ -50,5 +50,5 @@ void Free(struct sData *L) {
 		free(L);
 		L = buf;
 	}
-	//L = NULL;
+	L = NULL;
 }
