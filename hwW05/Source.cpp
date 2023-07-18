@@ -48,7 +48,7 @@ void Free(struct sData *L) {
 	while (L != NULL) {
 		printf("Succeeded in freeing %d.%d memory\n", L->x, L->y);
 		buf = L->next;
-		free(L);
+	free(L);
 		L = buf;
 	}
 }
