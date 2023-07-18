@@ -45,10 +45,10 @@ void Output(struct sData *L) {
 void Free(struct sData *L) {
 	sData* buf;
 	while (L != NULL) {
-		printf("Succeeded in freeing %d.%d memory\n", L->x, L->y);
+		//printf("Succeeded in freeing %d.%d memory\n", L->x, L->y);
 		buf = L->next;
 		free(L);
 		L = buf;
 	}
-	L = NULL;
+	//L = NULL;
 }
