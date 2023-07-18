@@ -35,10 +35,9 @@ void FillIn(struct sData *L) {
 	}
 }
 void Output(struct sData *L) {
-	sData* buf = L;
-	while (buf != NULL) {
-		printf("%d.%d\n", buf->x, buf->y);
-		buf = buf->next;
+	if (L != NULL) {
+		printf("%d.%d\n", L->x, L->y);
+		Output(L->next);
 	}
 	//for (int i = 0;i < 10;i++) printf("%d.%d\n", L[i].x, L[i].y);
 	//printf("Succeeded in printing linked list\n");
@@ -51,4 +50,5 @@ void Free(struct sData *L) {
 		free(L);
 		L = buf;
 	}
+	L = NULL;
 }
